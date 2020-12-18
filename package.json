@@ -1,0 +1,22 @@
+{
+  "name": "autocomplete",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^10.1.0",
+    "laravel-mix": "^5.0.9",
+    "postcss": "^8.2.1",
+    "tailwindcss": "^2.0.2",
+    "vue": "^2.6.12"
+  },
+  "scripts": {
+    "build:js": "node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:css": "tailwindcss build src/css/app.css -o public/css/app.css",
+    "dev": "yarn run build:css && yarn run build:js"
+  },
+  "devDependencies": {
+    "vue-template-compiler": "^2.6.12"
+  }
+}
